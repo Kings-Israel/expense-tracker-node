@@ -43,5 +43,5 @@
     ],
     "proxy": "https://localhost:5000/"
   },
-  "homepage": "/expense-tracker"
+  "homepage": "."
 }
