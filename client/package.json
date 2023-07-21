@@ -42,5 +42,6 @@
       ".localhost"
     ],
     "proxy": "https://localhost:5000/"
-  }
+  },
+  "homepage": "http://194.163.129.200/expense-tracker/"
 }
