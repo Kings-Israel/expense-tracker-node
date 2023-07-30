@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from './AppReducer'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://194.163.129.200/expense-tracker-api'
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'http://194.163.129.200/expense-tracker-api'
 
 // Initial state
 const initialState = {
@@ -22,7 +22,7 @@ export const GlobalProvider = ({children}) => {
   async function getTransactions() {
     try {
       const response = await axios.get('/api/v1/transactions')
-
+      
       dispatch({
         type: 'GET_TRANSACTIONS',
         payload: response.data.data
