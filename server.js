@@ -25,14 +25,14 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.use('/api/v1/transactions', transactions)
 
-if (process.env.NODE_ENV === 'production') {
-  const root = require('path').join(__dirname, 'client', 'build');
-  app.use(express.static(root));
+// if (process.env.NODE_ENV === 'production') {
+//   const root = require('path').join(__dirname, 'client', 'build');
+//   app.use(express.static(root));
 
-  app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  })
-}
+//   app.get('/*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//   })
+// }
 
 const PORT = process.env.PORT || 5000
 
