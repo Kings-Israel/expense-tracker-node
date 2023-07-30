@@ -2,6 +2,8 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from './AppReducer'
 import axios from 'axios'
 
+axios.defaults.baseURL = 'http://194.163.129.200/expense-tracker-api'
+
 // Initial state
 const initialState = {
   transactions: [],
